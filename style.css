@@ -1,3 +1,10 @@
 li {
     color : violet;
 }
+
+.lr {
+    display : flex;
+    gap: 20px;
+    background-color: greenyellow;
+
+}
