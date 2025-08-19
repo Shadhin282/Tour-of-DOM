@@ -4,17 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour of DOM</title>
+    <style>
+        h1{
+            color : gold;
+        }
+        #food-title{
+            color: green;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>This is header no banner</h1>
+    </header>
     <main>
-        <h1>Welcome to my DOM</h1>
+        <h1 class="foren">Welcome to my DOM</h1>
         <ul>
             <li>Shafayet</li>
             <li>
-             Bonobash
+             Bonobash 
             </li>
             <li>Jalali Set</li>
+            </li>
+            <li>DOM De re Baba</li>
         </ul>
+
+        <section>
+            <h1 id="food-title">Foods I Love</h1>
+            <ul>
+                <li>Fruits</li>
+                <li>Amm</li>
+                <li>Jam</li>
+                <li  class="foren">Lichu</li>
+                <li class="foren">Kola</li>
+            </ul>
+        </section>
     </main>
+
+    <script>
+        console.log("Hello From JavaScript!")
+        const student = {
+            name : "Shadhin Khan",
+            id: 13307041,
+            DepartMent : "BSME"
+        }
+        console.log(student)
+        // document.getElementsByTageName('li')
+        const liCollection = document.getElementsByTagName('li');
+        console.log(liCollection)
+
+        for(const li of liCollection){
+            console.log(li.innerText);
+        }
+
+        const headings = document.getElementsByTagName('h1');
+        for(const headin of headings){
+            console.log(headin.innerHTML)
+        }
+
+        // get by id 
+        const foodTitleH1 = document.getElementById('food-title');
+        console.log(foodTitleH1.innerText)
+            foodTitleH1.innerText = 'Food Makes Me Healthy.'
+            console.log(foodTitleH1.innerText)
+
+        const multiClass = document.getElementsByClassName('foren')
+        console.log(multiClass)
+        for(const multi of multiClass){
+            // console.log(multi);
+            console.log(multi.innerText)
+        }
+        console.log(document.getElementById('hello'))
+        console.log(document.getElementsByClassName('hello'))
+        console.log(document.getElementsByTagName('hello'))
+
+        const selectCss = document.querySelector('li');
+        console.log(selectCss)
+        const selectAllCss = document.querySelectorAll('li')
+        console.log(selectAllCss)
+        const selectSingleCss = document.querySelectorAll('ul .foren')
+        console.log(selectSingleCss)
+    </script>
+    <script src="./js/hello.js"></script>
 </body>
 </html>
