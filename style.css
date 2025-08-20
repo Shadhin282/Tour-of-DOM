@@ -8,3 +8,12 @@ li {
     background-color: greenyellow;
 
 }
+
+.section-card {
+    background-color: aquamarine;
+    padding : 15px;
+    margin-bottom : 10px;
+    color : white;
+        border-radius: 20px;
+        border: 2px solid tomato;
+}
